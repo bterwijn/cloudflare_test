@@ -28,3 +28,11 @@ npm install    # optional if you added deps later
 npm run deploy
 ```
 
+5. Run locally for testing
+
+If you want to run the Worker + site locally then from the project root you can run:
+
+```bash
+wrangler dev --cwd public --local
+```
+
