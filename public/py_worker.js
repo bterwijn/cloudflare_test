@@ -27,8 +27,8 @@ function waitSync() {
     while (sig === 0) {
         Atomics.wait(stepArr, 0, 0);
         sig = Atomics.load(stepArr, 0);
-        Atomics.store(stepArr, 0, 0);
     }
+    Atomics.store(stepArr, 0, 0);
     return sig;
 }
 
