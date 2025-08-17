@@ -5,11 +5,17 @@
     </head>
     <body>
         <p>Hello World!</p>
-        <button id="run"">Run</button>
-        <div id="output"></div>
+    <button id="run">Run</button>
+    <button id="continue">Continue</button>
+    <div id="output"></div>
+    <div id="diag" style="white-space:pre-wrap;font-family:monospace;margin-top:8px;"></div>
     </body>
 
     <script>
+      const sab = new SharedArrayBuffer(1 * 4);
+      const stepArr = new Int32Array(sab);
+      Atomics.store(stepArr, 0, 0);
+
         const worker = new Worker('py_worker.js');
         worker.onmessage = (e) => {
             const { data } = e;
@@ -21,11 +27,32 @@
                 document.getElementById('output').innerText += `unknown message type ${data.type}\n`;
             }
         };
+        worker.postMessage({ type: 'init', sab });
         worker.postMessage({ type: 'question', message: 'hello?' });
 
         document.getElementById('run').addEventListener('click', () => {
             //alert('Running worker!');
             worker.postMessage({ type: 'run', message: 'Run the worker!' });
         });
+
+        document.getElementById('continue').addEventListener('click', () => {
+            Atomics.store(stepArr, 0, 1);
+            Atomics.notify(stepArr, 0, 1);
+        });
+    </script>
+
+    <script>
+        // Minimal diagnostics: show crossOriginIsolated and SharedArrayBuffer availability
+        (function(){
+            const diagEl = document.getElementById('diag');
+            if (!diagEl) return;
+            const info = {
+                crossOriginIsolated: (typeof window !== 'undefined' && window.crossOriginIsolated === true),
+                hasSharedArrayBuffer: (typeof SharedArrayBuffer !== 'undefined')
+            };
+            diagEl.textContent = 'Diagnostics:\n' + JSON.stringify(info, null, 2);
+            // keep console log as a convenience
+            console.log('Diagnostics:', info);
+        })();
     </script>
 </html>
