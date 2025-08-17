@@ -4,6 +4,20 @@
         <title>Cloudflare test</title>
     </head>
     <body>
-        <p>Hello World! Hello World!</p>
+        <p>Hello World!</p>
+        <div id="output"></div>
     </body>
+
+    <script>
+        const worker = new Worker('py_worker.js');
+        worker.onmessage = (e) => {
+            const { data } = e;
+            if (data && data.type === 'question') {
+                document.getElementById('output').innerText = `Worker says: ${data.message}`;
+            } else if (data && data.type === 'error') {
+                document.getElementById('output').innerText = `Error: ${data.message}`;
+            }
+        };
+        worker.postMessage({ type: 'question', message: 'hello?' });
+    </script>
 </html>
