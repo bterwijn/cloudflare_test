@@ -1,0 +1,11 @@
+{
+  "name": "cloudflaretest-root",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.1.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy --cwd public"
+  }
+}

@@ -2,6 +2,8 @@ name = "cloudflaretest"
 compatibility_date = "2025-08-17"
 account_id = "eced3edd71e5b2b4c42dce7c240ed77b"
 
+main = "workers-site/index.js"
+
 [site]
 bucket = "public"
-entry-point = "workers-site"
+

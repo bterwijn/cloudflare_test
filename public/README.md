@@ -3,6 +3,7 @@ Minimal Cloudflare deploy (configured for running from the `public/` directory)
 Files added:
 - `wrangler.toml` — Wrangler config.
 - `package.json` — a convenience script: `npm run deploy` runs `wrangler publish`.
+ - `package.json` — a convenience script: `npm run deploy` runs `wrangler deploy`.
 
 Quick start
 
@@ -27,7 +28,3 @@ npm install    # optional if you added deps later
 npm run deploy
 ```
 
-Notes
-
-- If you want the config at the repository root, move `wrangler.toml` to the repo root and set `[site].bucket` to `"./public"`.
-- This is a minimal setup for static sites using Workers Sites via Wrangler.
