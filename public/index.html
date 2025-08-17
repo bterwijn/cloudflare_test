@@ -5,6 +5,7 @@
     </head>
     <body>
         <p>Hello World!</p>
+        <button id="run"">Run</button>
         <div id="output"></div>
     </body>
 
@@ -12,12 +13,19 @@
         const worker = new Worker('py_worker.js');
         worker.onmessage = (e) => {
             const { data } = e;
-            if (data && data.type === 'question') {
-                document.getElementById('output').innerText = `Worker says: ${data.message}`;
-            } else if (data && data.type === 'error') {
-                document.getElementById('output').innerText = `Error: ${data.message}`;
+            if (data.type === 'answer') {
+                document.getElementById('output').innerText += `Worker says: ${data.message}\n`;
+            } else if (data.type === 'error') {
+                document.getElementById('output').innerText += `Error: ${data.message}\n`;
+            } else {
+                document.getElementById('output').innerText += `unknown message type ${data.type}\n`;
             }
         };
         worker.postMessage({ type: 'question', message: 'hello?' });
+
+        document.getElementById('run').addEventListener('click', () => {
+            //alert('Running worker!');
+            worker.postMessage({ type: 'run', message: 'Run the worker!' });
+        });
     </script>
 </html>
