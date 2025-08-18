@@ -5,7 +5,7 @@
  -->
 <!-- Title: memory_graph Pages: 1 -->
 <svg width="307pt" height="274pt"
- viewBox="0.00 0.00 307.00 274.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="40.00 20.00 244.00 250.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 270)">
 <title>memory_graph</title>
 <polygon fill="transparent" stroke="transparent" points="-4,4 -4,-270 303,-270 303,4 -4,4"/>
@@ -20,7 +20,6 @@
 <polygon fill="none" stroke="black" points="43.5,-9.5 43.5,-26.5 60.5,-26.5 60.5,-9.5 43.5,-9.5"/>
 <text text-anchor="start" x="44.5" y="-14.3" font-family="Times,serif" font-size="14.00"> 2 </text>
 <polygon fill="none" stroke="black" points="25,-4 25,-55 66,-55 66,-4 25,-4"/>
-<text text-anchor="middle" x="8.5" y="-62.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096986543360 -->
 <g id="node2" class="node">
@@ -33,7 +32,6 @@
 <polygon fill="none" stroke="black" points="118.5,-9.5 118.5,-26.5 135.5,-26.5 135.5,-9.5 118.5,-9.5"/>
 <text text-anchor="start" x="119.5" y="-14.3" font-family="Times,serif" font-size="14.00"> y </text>
 <polygon fill="none" stroke="black" points="100,-4 100,-55 141,-55 141,-4 100,-4"/>
-<text text-anchor="middle" x="83.5" y="-62.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096997088832&#45;&gt;node131096986543360 -->
 <!-- node131096982680064 -->
@@ -47,7 +45,6 @@
 <polygon fill="none" stroke="black" points="193.5,-9.5 193.5,-26.5 210.5,-26.5 210.5,-9.5 193.5,-9.5"/>
 <text text-anchor="start" x="194.5" y="-14.3" font-family="Times,serif" font-size="14.00"> 2 </text>
 <polygon fill="none" stroke="black" points="175,-4 175,-55 216,-55 216,-4 175,-4"/>
-<text text-anchor="middle" x="158.5" y="-62.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096986543360&#45;&gt;node131096982680064 -->
 <!-- node131096987234688 -->
@@ -61,7 +58,6 @@
 <polygon fill="none" stroke="black" points="57.5,-104.5 57.5,-121.5 64.5,-121.5 64.5,-104.5 57.5,-104.5"/>
 <text text-anchor="start" x="59" y="-109.3" font-family="Times,serif" font-size="14.00"> </text>
 <polygon fill="none" stroke="black" points="39,-99 39,-148 70,-148 70,-99 39,-99"/>
-<text text-anchor="middle" x="19" y="-155.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096987234688&#45;&gt;node131096997088832 -->
 <g id="edge1" class="edge">
@@ -86,7 +82,6 @@
 <polygon fill="none" stroke="black" points="129.5,-104.5 129.5,-121.5 136.5,-121.5 136.5,-104.5 129.5,-104.5"/>
 <text text-anchor="start" x="131" y="-109.3" font-family="Times,serif" font-size="14.00"> </text>
 <polygon fill="none" stroke="black" points="111,-99 111,-148 142,-148 142,-99 111,-99"/>
-<text text-anchor="middle" x="91" y="-155.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096987234688&#45;&gt;node131096987234816 -->
 <!-- node131096987234816&#45;&gt;node131096997088832 -->
@@ -112,7 +107,6 @@
 <polygon fill="none" stroke="black" points="201.5,-104.5 201.5,-121.5 208.5,-121.5 208.5,-104.5 201.5,-104.5"/>
 <text text-anchor="start" x="203" y="-109.3" font-family="Times,serif" font-size="14.00"> </text>
 <polygon fill="none" stroke="black" points="183,-99 183,-148 214,-148 214,-99 183,-99"/>
-<text text-anchor="middle" x="163" y="-155.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096987234816&#45;&gt;node131096987234752 -->
 <!-- node131096982680128 -->
@@ -126,7 +120,6 @@
 <polygon fill="none" stroke="black" points="268.5,-9.5 268.5,-26.5 285.5,-26.5 285.5,-9.5 268.5,-9.5"/>
 <text text-anchor="start" x="269.5" y="-14.3" font-family="Times,serif" font-size="14.00"> y </text>
 <polygon fill="none" stroke="black" points="250,-4 250,-55 291,-55 291,-4 250,-4"/>
-<text text-anchor="middle" x="233.5" y="-62.8" font-family="Times,serif" font-size="14.00">list</text>
 </g>
 <!-- node131096982680064&#45;&gt;node131096982680128 -->
 <!-- node131096987234752&#45;&gt;node131096982680064 -->
@@ -162,7 +155,6 @@
 <polygon fill="none" stroke="black" points="132.5,-199.5 132.5,-216.5 155.5,-216.5 155.5,-199.5 132.5,-199.5"/>
 <text text-anchor="start" x="142" y="-204.3" font-family="Times,serif" font-size="14.00"> </text>
 <polygon fill="none" stroke="black" stroke-width="3" points="49,-193.5 49,-245.5 162,-245.5 162,-193.5 49,-193.5"/>
-<text text-anchor="middle" x="29" y="-254.8" font-family="Times,serif" font-size="14.00">dict</text>
 </g>
 <!-- node131096986748992&#45;&gt;node131096987234688 -->
 <g id="edge7" class="edge">
